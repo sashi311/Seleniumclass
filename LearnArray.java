@@ -16,6 +16,7 @@ public class LearnArray {
 		for (int i = 0; i < lengthArr; i++) {
 			System.out.println("element of Index"+i+"is:"+numberArr[i]);
 		}
+		//sorting out the numbers mis alligned
 		int[] shortArr= {101,20,430,4};
 		Arrays.sort(shortArr);
 		for (int i = 0; i < shortArr.length; i++) {
