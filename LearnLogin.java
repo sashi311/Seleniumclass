@@ -71,5 +71,19 @@ public class LearnLogin {
 		//<a>,text(Black color)
 		driver.findElement(By.linkText("CRM/SFA")).click();
 		//company name,first name,lastname,click create lead
+		driver.findElement(By.linkText("Create Lead")).click();
+		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("Testleaf");
+		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("sasitharan");
+        driver.findElement(By.id("createLeadForm_lastName")).sendKeys("B");
+        driver.findElement(By.id("createLeadForm_primaryPhoneCountryCode")).clear();
+        driver.findElement(By.id("createLeadForm_primaryPhoneCountryCode")).sendKeys("3");
+        Thread.sleep(2000);
+        driver.findElement(By.className("smallSubmit")).click();
+        String text = driver.findElement(By.id("viewLead_firstName_sp")).getText();
+        System.out.println(text);
+        if (text.equals("sasitharan")) {
+			System.out.println("name is correct");
+		}
+        
 	}
 }
